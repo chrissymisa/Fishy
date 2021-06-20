@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Fishy</title>
+  <link rel="stylesheet" href="assets/css/default.css?v=3.0">
+  <link rel="shortcut icon" type="image/png" href="favicon.ico?v=1.0">
+</head>
+<body class="fish-body">
+
+
+<script type="text/javascript"> var img = new Image;
+img.src = './assets/images/fish1.gif';
+
+
+document.addEventListener('mousemove', function(e) {
+    e = e || window.event;
+    var tag = document.createElement('img');
+    console.log(e);
+    tag.src = img.src;
+    tag.style.position = 'absolute';
+    tag.style.height = '20%';
+    tag.style.width = '20%';
+    tag.style.top = (e.pageY || e.clientY) + 'px';
+    tag.style.left = (e.pageX || e.clientX) + 'px';
+    this.body.appendChild(tag);
+}, false); </script>
+
+</body>
+</html>
